@@ -4,7 +4,7 @@ This is a repository to showcase skills, share projects and track my progress in
 
 ## Movie Correlation Project
 
-**Code:** [Movie Correlation Project - Python](https://github.com/kramarivan/data-analytics-portofolio-projects/blob/main/Movie%20Correlation%20Project%20-%20Python.ipynb)
+**Code:** [Movie_Correlation_Project_Python.ipynb - Python](https://github.com/kramarivan/data_analytics_portofolio_projects/blob/main/Movie_Correlation_Project_Python.ipynb)
 
 In this project I was finding correlation between variables in movies dataset using python.
 
