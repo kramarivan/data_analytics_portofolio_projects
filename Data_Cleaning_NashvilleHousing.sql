@@ -1,4 +1,4 @@
-/****** Script for SelectTopNRows command from SSMS  ******/
+/****** Script SSMS  ******/
 
 
 SELECT * FROM CleaningData.dbo.NashvilleHousing
