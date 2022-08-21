@@ -27,7 +27,7 @@ Select *
 From CleaningData.dbo.NashvilleHousing
 order by ParcelID
 
--- Same Parcel ID have the same Property Address, we can use that to populate missing addresses
+-- Same Parcel IDs have the same Property Address, we can use that to populate missing addresses
 
 Select a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, ISNULL(a.PropertyAddress,b.PropertyAddress)
 From CleaningData.dbo.NashvilleHousing a
