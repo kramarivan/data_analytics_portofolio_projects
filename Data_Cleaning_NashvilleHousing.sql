@@ -53,7 +53,6 @@ Where a.PropertyAddress is null
 Select PropertyAddress
 From CleaningData.dbo.NashvilleHousing
 
--- https://imgur.com/Mv8IGj1
 
 SELECT
 SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress) -1 ) as Address
@@ -76,10 +75,11 @@ Update NashvilleHousing
 SET PropertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddress) + 1 , LEN(PropertyAddress))
 
 
+
 Select *
 From CleaningData.dbo.NashvilleHousing
 
-
+-- https://imgur.com/Mv8IGj1
 
 Select OwnerAddress
 From CleaningData.dbo.NashvilleHousing
