@@ -7,6 +7,8 @@ SELECT * FROM CleaningData.dbo.NashvilleHousing
 
 --Standardize Date Format
 
+-- https://imgur.com/tPl94CZ
+
 ALTER TABLE NashvilleHousing
 Add SaleDateConverted Date;
 
@@ -14,6 +16,8 @@ Update NashvilleHousing
 SET SaleDateConverted = CONVERT(Date,SaleDate)
 
 SELECT SaleDateConverted FROM NashvilleHousing
+
+-- https://imgur.com/yhmVAYj
 
 --------------------------------------------------------------------------------------------------------------------------
 
@@ -23,7 +27,7 @@ Select *
 From CleaningData.dbo.NashvilleHousing
 order by ParcelID
 
--- Same Parcel ID have the same Property Adress, we can use that to populate missing adresses
+-- Same Parcel ID have the same Property Address, we can use that to populate missing addresses
 
 Select a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, ISNULL(a.PropertyAddress,b.PropertyAddress)
 From CleaningData.dbo.NashvilleHousing a
@@ -49,6 +53,7 @@ Where a.PropertyAddress is null
 Select PropertyAddress
 From CleaningData.dbo.NashvilleHousing
 
+-- https://imgur.com/Mv8IGj1
 
 SELECT
 SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress) -1 ) as Address
@@ -112,6 +117,8 @@ SET OwnerSplitState = PARSENAME(REPLACE(OwnerAddress, ',', '.') , 1)
 Select *
 From CleaningData.dbo.NashvilleHousing
 
+-- https://imgur.com/iKsCmm7
+
 
 --------------------------------------------------------------------------------------------------------------------------
 
@@ -123,6 +130,7 @@ From CleaningData.dbo.NashvilleHousing
 Group by SoldAsVacant
 order by 2
 
+-- https://imgur.com/BryJdDz
 
 Select SoldAsVacant
 , CASE When SoldAsVacant = 'Y' THEN 'Yes'
